@@ -1,0 +1,19 @@
+Result,Time spent (hours),Gender,Distance between Residence and college (km)
+Pass,3,Male,5
+Pass,5,Female,3
+Fail,2,Female,7
+Fail,1,Male,8
+Pass,4,Male,4
+Fail,3,Female,6
+Fail,2,Male,9
+Pass,5,Female,3
+Pass,4,Male,2
+Fail,3,Female,8
+Pass,2,Male,4
+Fail,5,Male,9
+Pass,4,Female,5
+Pass,5,Female,3
+Fail,4,Male,9
+Fail,3,Female,6
+Fail,2,Male,5
+Pass,3,Male,2

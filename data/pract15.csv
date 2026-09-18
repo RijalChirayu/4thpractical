@@ -1,0 +1,18 @@
+Person,Income (000 Rs),Age(yrs),Ecological region,Gender
+A,45,32,Terai,Male
+B,56,41,Hill,Male
+C,21,23,Hill,Female
+D,29,31,Mountain,Female
+E,62,44,Terai,Male
+F,73,57,Hill,Male
+G,47,41,Mountain,Female
+H,39,28,Teari,Male
+I,36,33,Hill,Female
+J,82,40,Hill,Male
+K,53,44,Terai,Female
+L,19,30,Hill,Male
+M,39,47,Mountain,Male
+N,55,37,Mountain,Female
+O,38,47,Hill,Female
+P,77,35,Terai,Male
+Q,52,43,Terai,Male

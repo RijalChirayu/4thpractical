@@ -1,0 +1,19 @@
+Result,Time spent (hours),Gender
+Pass,3,Male
+Pass,5,Female
+Fail,2,Female
+Fail,1,Male
+Pass,4,Male
+Fail,3,Female
+Fail,2,Male
+Pass,5,Female
+Pass,4,Male
+Fail,3,Female
+Pass,2,Male
+Fail,5,Male
+Pass,4,Female
+Pass,5,Female
+Fail,4,Male
+Fail,3,Female
+Fail,2,Male
+Pass,3,Male
