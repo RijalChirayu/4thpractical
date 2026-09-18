@@ -1,4 +1,4 @@
-Person,Income (000 Rs),Age(yrs),Ecological region
+person,income_000,age_yrs,region
 A,45,32,Terai
 B,56,41,Hill
 C,21,23,Hill
@@ -6,7 +6,7 @@ D,29,31,Mountain
 E,62,44,Terai
 F,73,57,Hill
 G,47,41,Mountain
-H,39,28,Teari
+H,39,28,Terai
 I,36,33,Hill
 J,82,40,Hill
 K,53,44,Terai

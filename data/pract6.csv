@@ -1,4 +1,4 @@
-Result,Time spent (hours),Gender,Distance between Residence and college (km)
+result,study_hrs,gender,distance_km
 Pass,3,Male,5
 Pass,5,Female,3
 Fail,2,Female,7

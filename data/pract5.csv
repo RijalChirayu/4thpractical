@@ -1,4 +1,4 @@
-Result,Time spent (hours),Gender
+result,study_hrs,gender
 Pass,3,Male
 Pass,5,Female
 Fail,2,Female
