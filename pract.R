@@ -10,3 +10,13 @@ predict(model , newdata = new_obs)
 data <- data.frame(windVelocity = 1/wind_vel , 
                    DcOutput = dc_output)
 
+#pract5
+head(pract5)
+attach(pract5)
+result <- factor(result, levels = c("Pass" ,"Fail") , labels = c(1 , 0))
+
+model <- glm(result ~ study_hrs + gender , family = binomial)
+summary(model)
+
+
+
