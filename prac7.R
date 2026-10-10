@@ -48,3 +48,30 @@ summary(model_doublas)
 
 #pract12 
 
+
+model <- lm(pract12$income_000 ~ pract12$gender + pract12$occupation)
+summary(model)
+
+#pract13
+model_13 <- lm(pract13$salary_000 ~ pract13$gender + pract13$months_employed)
+summary(model_13)
+
+
+#pract14 
+region <- factor(pract14$region , levels = c("Terai" , "Hill", "Mountain"))
+model_14 <- lm(pract14$income_000 ~ pract14$age_yrs + region)
+summary(model_14)
+
+#pract15 same as 14 tehi extra independent variable 
+
+#pract16 
+library(tidyverse)
+long <- pivot_longer(pract16 , cols = q1:q4 , names_to = "season" , values_to = "profit")
+model_16 <- lm(long$profit ~ 0 + long$season)
+summary(model_16)
+
+#pract5
+result_dummy <- factor(pract5$result , levels = c("Pass" , "Fail") , labels = c(1 , 0))
+model_5 <- glm(formula = result_dummy ~ pract5$study_hrs + pract5$gender , family = binomial)
+summary(model_5)
+
