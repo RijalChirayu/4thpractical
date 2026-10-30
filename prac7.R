@@ -1,3 +1,35 @@
+#Pract 1 
+
+model_1_loglog <- lm(log(pract1$sales_000) ~ log(pract1$ad_exp_000))
+summary(model_1_loglog)
+
+model_1_loglin <- lm(log(pract1$sales_000) ~ pract1$ad_exp_000)
+summary(model_1_loglin)
+
+model_1_linlog <- lm(pract1$sales_000 ~ log(pract1$ad_exp_000))
+summary(model_1_linlog)
+
+
+#Pract2
+
+
+
+
+
+#Pract 3 
+wind_vel <- c(5 , 6, 3.4,2.7,10,9.7,9.55,3.05,8.15,6.2,2.9,6.35,4.6,5.8,7.4)
+dc_output <- c(1.582,1.822,1.057,0.5,2.236,2.386,2.294,0.558,2.166,1.866,0.653,1.93,1.562,1.737,2.088)
+
+model <- lm(dc_output ~ I(1/wind_vel))
+
+summary(model)
+
+
+
+
+
+
+#Pract 7
 library(ggplot2)
 ggplot(pract7 , aes(months , weight_loss_kg)) + geom_line()
 #y = b0 + b1x + b2x^2 
