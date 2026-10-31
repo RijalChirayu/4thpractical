@@ -1,5 +1,4 @@
 #Pract 1 
-
 model_1_loglog <- lm(log(pract1$sales_000) ~ log(pract1$ad_exp_000))
 summary(model_1_loglog)
 
@@ -11,9 +10,14 @@ summary(model_1_linlog)
 
 
 #Pract2
+model_2_loglog <- lm(log(pract2$profit_000) ~ log(pract2$ad_exp_000) + log(pract2$sales_000))
+summary(model_2_loglog)
 
+#Multicollinearity
+install.packages("car")
+library(car)
 
-
+vif(model_2_loglog) #>10 suggests high multi-collinearity 
 
 
 #Pract 3 
@@ -24,7 +28,24 @@ model <- lm(dc_output ~ I(1/wind_vel))
 
 summary(model)
 
+new_obs <- data.frame(wind_vel = c(9.5))
+predict(model , newdata = new_obs)
 
+#Pract 4
+result_dummy <- factor(pract4$result , levels = c("Fail", "Pass")) 
+model_4 <- glm(result_dummy ~ study_hrs , data = pract4 , family = binomial)
+summary(model_4)
+predict(model_4 , newdata = data.frame(study_hrs = 6) , type = "response")
+
+#Pract 5
+model_5 <- glm(formula = result_dummy ~ study_hrs + gender, data = pract5 , family = binomial)
+summary(model_5)
+predict(model_5 , newdata = data.frame(study_hrs = 6, gender = "Male"), type = "response")
+
+#Pract 6
+model_6 <- glm(formula = result_dummy ~ study_hrs + gender + distance_km, data = pract6, family = binomial)
+summary(model_6)
+predict(model_6 , newdata = data.frame(study_hrs = 6 , gender = "Female", distance_km = 10 ), type = "response")
 
 
 
@@ -79,8 +100,6 @@ model_doublas <- lm(log(output) ~ log(labour) + log(capital))
 summary(model_doublas)
 
 #pract12 
-
-
 model <- lm(pract12$income_000 ~ pract12$gender + pract12$occupation)
 summary(model)
 
@@ -102,8 +121,6 @@ long <- pivot_longer(pract16 , cols = q1:q4 , names_to = "season" , values_to = 
 model_16 <- lm(long$profit ~ 0 + long$season)
 summary(model_16)
 
-#pract5
-result_dummy <- factor(pract5$result , levels = c("Pass" , "Fail") , labels = c(1 , 0))
-model_5 <- glm(formula = result_dummy ~ pract5$study_hrs + pract5$gender , family = binomial)
-summary(model_5)
+#pract17 ni same as 16 but with intercept
+
 
