@@ -46,7 +46,7 @@ predict(model_5 , newdata = data.frame(study_hrs = 6, gender = "Male"), type = "
 model_6 <- glm(formula = result_dummy ~ study_hrs + gender + distance_km, data = pract6, family = binomial)
 summary(model_6)
 predict(model_6 , newdata = data.frame(study_hrs = 6 , gender = "Female", distance_km = 10 ), type = "response")
-
+#model doesn't converge
 
 
 
